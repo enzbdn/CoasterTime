@@ -1,10 +1,3 @@
-//
-//  CoasterTimeApp.swift
-//  CoasterTime Watch App
-//
-//  Created by Enzo Bodin on 28/04/2024.
-//
-
 import SwiftUI
 
 @main

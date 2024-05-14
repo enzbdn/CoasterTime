@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C66FB5922BF3AB1400658343 /* ParkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5912BF3AB1400658343 /* ParkListView.swift */; };
+		C66FB5942BF3AB3E00658343 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5932BF3AB3E00658343 /* RideListView.swift */; };
+		C66FB5962BF3AB5600658343 /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5952BF3AB5600658343 /* RideViewModel.swift */; };
 		C6A804B82BDE64F300607091 /* CoasterTime Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C6A804B72BDE64F300607091 /* CoasterTime Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C6A804BD2BDE64F300607091 /* CoasterTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */; };
 		C6A804BF2BDE64F300607091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A804BE2BDE64F300607091 /* ContentView.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C66FB5912BF3AB1400658343 /* ParkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListView.swift; sourceTree = "<group>"; };
+		C66FB5932BF3AB3E00658343 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
+		C66FB5952BF3AB5600658343 /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
 		C6A804B12BDE64F300607091 /* CoasterTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoasterTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A804B72BDE64F300607091 /* CoasterTime Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoasterTime Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoasterTimeApp.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 		C6A804BB2BDE64F300607091 /* CoasterTime Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				C66FB5932BF3AB3E00658343 /* RideListView.swift */,
+				C66FB5952BF3AB5600658343 /* RideViewModel.swift */,
+				C66FB5912BF3AB1400658343 /* ParkListView.swift */,
 				C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */,
 				C6A804BE2BDE64F300607091 /* ContentView.swift */,
 				C6A804C02BDE64F400607091 /* Assets.xcassets */,
@@ -192,6 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66FB5962BF3AB5600658343 /* RideViewModel.swift in Sources */,
+				C66FB5942BF3AB3E00658343 /* RideListView.swift in Sources */,
+				C66FB5922BF3AB1400658343 /* ParkListView.swift in Sources */,
 				C6A804BF2BDE64F300607091 /* ContentView.swift in Sources */,
 				C6A804BD2BDE64F300607091 /* CoasterTimeApp.swift in Sources */,
 			);
