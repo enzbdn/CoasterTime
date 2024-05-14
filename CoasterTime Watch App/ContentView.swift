@@ -1,103 +1,150 @@
-//
-//  ContentView.swift
-//  CoasterTime Watch App
-//
-//  Created by Enzo Bodin on 28/04/2024.
-//
-
 import SwiftUI
 
 var ParkList: [String: Int] = ["Parc Astérix": 9, "Disneyland Paris": 4, "Disney Adventure World": 28]
 
-struct Ride: Identifiable, Decodable {
+struct Parent: Decodable {
+    let lands: [Land]
+    let rides: [Ride]
+}
+
+struct Land: Decodable, Identifiable {
     let id: Int
     let name: String
-    let isOpen: Bool
-    let waitTime: Int
+    let rides: [Ride]
+}
+
+struct Ride: Decodable, Identifiable {
+    let id: Int
+    let name: String
+    let isOpen: Bool?
+    let waitTime: Int?
     let lastUpdated: String
     
     private enum CodingKeys: String, CodingKey {
-        case id, name, is_open, wait_time, last_updated
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
-        name = try container.decode(String.self, forKey: .name)
-        isOpen = (try container.decodeIfPresent(Bool.self, forKey: .is_open)) ?? false
-        waitTime = (try container.decodeIfPresent(Int.self, forKey: .wait_time)) ?? -1
-        lastUpdated = try container.decode(String.self, forKey: .last_updated)
-    }
-}
-
-struct QueueData: Decodable {
-    let rides: [Ride]
-    
-    private enum RootKeys: String, CodingKey {
-        case rides
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: RootKeys.self)
-        self.rides = try container.decode([Ride].self, forKey: .rides)
+        case id, name
+        case isOpen = "is_open"
+        case waitTime = "wait_time"
+        case lastUpdated = "last_updated"
     }
 }
 
 class RideViewModel: ObservableObject {
     @Published var rides: [Ride] = []
+    @Published var errorMessage: String?
     
     func fetchData(for parkName: String) {
         guard let parkID = ParkList[parkName] else {
-            print("Park ID not found for \(parkName)")
+            DispatchQueue.main.async {
+                self.errorMessage = "Park ID not found for \(parkName)"
+            }
             return
         }
-    
-        guard let url = URL(string: "https://queue-times.com/parks/\(parkID)/queue_times.json")
-            else { return }
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        
+        guard let url = URL(string: "https://queue-times.com/parks/\(parkID)/queue_times.json") else {
+            DispatchQueue.main.async {
+                self.errorMessage = "Invalid URL"
+            }
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error as? URLError, error.code == .cancelled {
+                DispatchQueue.main.async {
+                    self.errorMessage = "Request was cancelled"
+                }
+                return
+            }
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                }
+                return
+            }
+            
             guard let data = data else {
-                print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
+                DispatchQueue.main.async {
+                    self.errorMessage = "No data received"
+                }
                 return
             }
             
             do {
-                let queueData = try JSONDecoder().decode(QueueData.self, from: data)
-                var sortedRides = queueData.rides.sorted(by: { $0.waitTime > $1.waitTime })
-                sortedRides = sortedRides.filter { $0.waitTime > 0 }
+                let parent = try JSONDecoder().decode(Parent.self, from: data)
+                var allRides: [Ride] = parent.rides
+                
+                // If lands are present, append rides from lands
+                for land in parent.lands {
+                    allRides.append(contentsOf: land.rides)
+                }
+                
+                allRides = allRides.sorted(by: { ($0.waitTime ?? 0) > ($1.waitTime ?? 0) })
+                allRides = allRides.filter { $0.waitTime ?? 0 > 0 }
+                
                 DispatchQueue.main.async {
-                    self.rides = sortedRides
+                    self.rides = allRides
+                    self.errorMessage = nil
                 }
             } catch {
-                print("Error decoding JSON: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                }
             }
         }.resume()
     }
 }
 
-
-struct ContentView: View {
-    @StateObject var viewModel = RideViewModel()
+struct ParkSelectionView: View {
+    @StateObject private var viewModel = RideViewModel()
+    @State private var selectedPark = "Disneyland Paris"
     
     var body: some View {
-        VStack {
-            List(viewModel.rides) { ride in
-                VStack(alignment: .leading) {
-                    Text(ride.name)
-                    Text("Wait Time: \(ride.waitTime) minutes")
+        NavigationView {
+            VStack {
+                Picker("Select a Park", selection: $selectedPark) {
+                    ForEach(ParkList.keys.sorted(), id: \.self) { parkName in
+                        Text(parkName).tag(parkName)
+                    }
+                }
+                .pickerStyle(WheelPickerStyle())
+                .padding()
+                
+                Button(action: {
+                    viewModel.fetchData(for: selectedPark)
+                }) {
+                    Text("Show Rides")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                } else {
+                    List(viewModel.rides) { ride in
+                        VStack(alignment: .leading) {
+                            Text(ride.name)
+                                .font(.headline)
+                            Text("Wait Time: \(ride.waitTime ?? 0) minutes")
+                                .font(.subheadline)
+                        }
+                    }
                 }
             }
-            
-            Button(action: {
-                viewModel.fetchData(for: "Parc Astérix")
-            }) {
-                Text("Refresh")
-            }
-        }
-        .onAppear {
-            viewModel.fetchData(for: "Parc Astérix")
+            .navigationTitle("Park Selector")
         }
     }
 }
+
+struct ContentView: View {
+    var body: some View {
+        ParkSelectionView()
+    }
+}
+
 #Preview {
     ContentView()
 }
