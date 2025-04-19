@@ -4,7 +4,9 @@ import SwiftUI
 struct CoasterTime_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }

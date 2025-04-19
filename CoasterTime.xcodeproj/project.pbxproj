@@ -7,50 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C66FB5922BF3AB1400658343 /* ParkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5912BF3AB1400658343 /* ParkListView.swift */; };
-		C66FB5942BF3AB3E00658343 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5932BF3AB3E00658343 /* RideListView.swift */; };
-		C66FB5962BF3AB5600658343 /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66FB5952BF3AB5600658343 /* RideViewModel.swift */; };
-		C6A804B82BDE64F300607091 /* CoasterTime Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C6A804B72BDE64F300607091 /* CoasterTime Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C6A804BD2BDE64F300607091 /* CoasterTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */; };
 		C6A804BF2BDE64F300607091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A804BE2BDE64F300607091 /* ContentView.swift */; };
 		C6A804C12BDE64F400607091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A804C02BDE64F400607091 /* Assets.xcassets */; };
 		C6A804C42BDE64F400607091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A804C32BDE64F400607091 /* Preview Assets.xcassets */; };
+		C6F40FC32DB4046C00E31C7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F40FBB2DB4046C00E31C7B /* Preview Assets.xcassets */; };
+		C6F40FC42DB4046C00E31C7B /* ParkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FBF2DB4046C00E31C7B /* ParkListView.swift */; };
+		C6F40FC52DB4046C00E31C7B /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FB92DB4046C00E31C7B /* Ride.swift */; };
+		C6F40FC62DB4046C00E31C7B /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FBD2DB4046C00E31C7B /* RideViewModel.swift */; };
+		C6F40FC72DB4046C00E31C7B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FB72DB4046C00E31C7B /* FavoritesManager.swift */; };
+		C6F40FC82DB4046C00E31C7B /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FB82DB4046C00E31C7B /* Park.swift */; };
+		C6F40FC92DB4046C00E31C7B /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FC12DB4046C00E31C7B /* RideListView.swift */; };
+		C6F40FCA2DB4046C00E31C7B /* RideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FC02DB4046C00E31C7B /* RideDetailView.swift */; };
+		C6F40FCD2DB411F600E31C7B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F40FCB2DB411F600E31C7B /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C6A804B92BDE64F300607091 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6A804AB2BDE64F300607091 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6A804B62BDE64F300607091;
-			remoteInfo = "CoasterTime Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C6A804CA2BDE64F400607091 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				C6A804B82BDE64F300607091 /* CoasterTime Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		C66FB5912BF3AB1400658343 /* ParkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListView.swift; sourceTree = "<group>"; };
-		C66FB5932BF3AB3E00658343 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
-		C66FB5952BF3AB5600658343 /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
-		C6A804B12BDE64F300607091 /* CoasterTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoasterTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A804B72BDE64F300607091 /* CoasterTime Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoasterTime Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoasterTimeApp.swift; sourceTree = "<group>"; };
 		C6A804BE2BDE64F300607091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C6A804C02BDE64F400607091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6A804C32BDE64F400607091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6F40FB72DB4046C00E31C7B /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		C6F40FB82DB4046C00E31C7B /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		C6F40FB92DB4046C00E31C7B /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		C6F40FBB2DB4046C00E31C7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6F40FBD2DB4046C00E31C7B /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
+		C6F40FBF2DB4046C00E31C7B /* ParkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListView.swift; sourceTree = "<group>"; };
+		C6F40FC02DB4046C00E31C7B /* RideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailView.swift; sourceTree = "<group>"; };
+		C6F40FC12DB4046C00E31C7B /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
+		C6F40FCB2DB411F600E31C7B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +61,6 @@
 		C6A804B22BDE64F300607091 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6A804B12BDE64F300607091 /* CoasterTime.app */,
 				C6A804B72BDE64F300607091 /* CoasterTime Watch App.app */,
 			);
 			name = Products;
@@ -84,9 +69,11 @@
 		C6A804BB2BDE64F300607091 /* CoasterTime Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				C66FB5932BF3AB3E00658343 /* RideListView.swift */,
-				C66FB5952BF3AB5600658343 /* RideViewModel.swift */,
-				C66FB5912BF3AB1400658343 /* ParkListView.swift */,
+				C6F40FCC2DB411F600E31C7B /* Utilities */,
+				C6F40FBA2DB4046C00E31C7B /* Models */,
+				C6F40FBC2DB4046C00E31C7B /* Preview Content */,
+				C6F40FBE2DB4046C00E31C7B /* ViewModels */,
+				C6F40FC22DB4046C00E31C7B /* Views */,
 				C6A804BC2BDE64F300607091 /* CoasterTimeApp.swift */,
 				C6A804BE2BDE64F300607091 /* ContentView.swift */,
 				C6A804C02BDE64F400607091 /* Assets.xcassets */,
@@ -103,26 +90,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C6F40FBA2DB4046C00E31C7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6F40FB72DB4046C00E31C7B /* FavoritesManager.swift */,
+				C6F40FB82DB4046C00E31C7B /* Park.swift */,
+				C6F40FB92DB4046C00E31C7B /* Ride.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6F40FBC2DB4046C00E31C7B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6F40FBB2DB4046C00E31C7B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6F40FBE2DB4046C00E31C7B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C6F40FBD2DB4046C00E31C7B /* RideViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C6F40FC22DB4046C00E31C7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6F40FBF2DB4046C00E31C7B /* ParkListView.swift */,
+				C6F40FC02DB4046C00E31C7B /* RideDetailView.swift */,
+				C6F40FC12DB4046C00E31C7B /* RideListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6F40FCC2DB411F600E31C7B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C6F40FCB2DB411F600E31C7B /* ColorExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C6A804B02BDE64F300607091 /* CoasterTime */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6A804CB2BDE64F400607091 /* Build configuration list for PBXNativeTarget "CoasterTime" */;
-			buildPhases = (
-				C6A804AF2BDE64F300607091 /* Resources */,
-				C6A804CA2BDE64F400607091 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6A804BA2BDE64F300607091 /* PBXTargetDependency */,
-			);
-			name = CoasterTime;
-			productName = CoasterTime;
-			productReference = C6A804B12BDE64F300607091 /* CoasterTime.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
 		C6A804B62BDE64F300607091 /* CoasterTime Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6A804C72BDE64F400607091 /* Build configuration list for PBXNativeTarget "CoasterTime Watch App" */;
@@ -148,11 +162,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					C6A804B02BDE64F300607091 = {
-						CreatedOnToolsVersion = 15.3;
-					};
 					C6A804B62BDE64F300607091 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -171,24 +182,17 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6A804B02BDE64F300607091 /* CoasterTime */,
 				C6A804B62BDE64F300607091 /* CoasterTime Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C6A804AF2BDE64F300607091 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6A804B52BDE64F300607091 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F40FC32DB4046C00E31C7B /* Preview Assets.xcassets in Resources */,
 				C6A804C42BDE64F400607091 /* Preview Assets.xcassets in Resources */,
 				C6A804C12BDE64F400607091 /* Assets.xcassets in Resources */,
 			);
@@ -201,23 +205,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66FB5962BF3AB5600658343 /* RideViewModel.swift in Sources */,
-				C66FB5942BF3AB3E00658343 /* RideListView.swift in Sources */,
-				C66FB5922BF3AB1400658343 /* ParkListView.swift in Sources */,
+				C6F40FC42DB4046C00E31C7B /* ParkListView.swift in Sources */,
+				C6F40FCD2DB411F600E31C7B /* ColorExtensions.swift in Sources */,
+				C6F40FC52DB4046C00E31C7B /* Ride.swift in Sources */,
+				C6F40FC62DB4046C00E31C7B /* RideViewModel.swift in Sources */,
+				C6F40FC72DB4046C00E31C7B /* FavoritesManager.swift in Sources */,
+				C6F40FC82DB4046C00E31C7B /* Park.swift in Sources */,
+				C6F40FC92DB4046C00E31C7B /* RideListView.swift in Sources */,
+				C6F40FCA2DB4046C00E31C7B /* RideDetailView.swift in Sources */,
 				C6A804BF2BDE64F300607091 /* ContentView.swift in Sources */,
 				C6A804BD2BDE64F300607091 /* CoasterTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C6A804BA2BDE64F300607091 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6A804B62BDE64F300607091 /* CoasterTime Watch App */;
-			targetProxy = C6A804B92BDE64F300607091 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C6A804C52BDE64F400607091 /* Debug */ = {
@@ -254,7 +255,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -272,12 +276,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = watchos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -315,7 +322,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -327,10 +337,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = watchos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -342,16 +355,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoasterTime Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CoasterTime;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Shufflow.CoasterTime.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,7 +375,9 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				TVOS_DEPLOYMENT_TARGET = "";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				XROS_DEPLOYMENT_TARGET = "";
 			};
 			name = Debug;
 		};
@@ -372,16 +389,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoasterTime Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CoasterTime;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Shufflow.CoasterTime.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,41 +409,10 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				TVOS_DEPLOYMENT_TARGET = "";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
-			};
-			name = Release;
-		};
-		C6A804CC2BDE64F400607091 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
-				INFOPLIST_KEY_CFBundleDisplayName = CoasterTime;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Shufflow.CoasterTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		C6A804CD2BDE64F400607091 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RNP3ZWHJW;
-				INFOPLIST_KEY_CFBundleDisplayName = CoasterTime;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Shufflow.CoasterTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				XROS_DEPLOYMENT_TARGET = "";
 			};
 			name = Release;
 		};
@@ -445,15 +433,6 @@
 			buildConfigurations = (
 				C6A804C82BDE64F400607091 /* Debug */,
 				C6A804C92BDE64F400607091 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6A804CB2BDE64F400607091 /* Build configuration list for PBXNativeTarget "CoasterTime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6A804CC2BDE64F400607091 /* Debug */,
-				C6A804CD2BDE64F400607091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
